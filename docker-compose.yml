@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+
+  wallSticker_mongodb:
+    image: mongo:latest
+    container_name: WallSticker_MongoDB
+    ports:
+      - 27117:27017
+    environment:
+      - TZ=Asia/Shanghai
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=Password123
+    volumes:
+      - .\MongoDB\data:/data/db
